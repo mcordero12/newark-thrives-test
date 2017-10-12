@@ -2,7 +2,8 @@
   <div id="app">
     <Slideout menu="#menu" panel="#panel" :toggleSelectors="['.toggle-button']" @on-open="open">
       <nav id="menu">
-        <div>Menu</div>
+        <div><h3>Program Categories</h3></div>
+        <nt-sidebaritems></nt-sidebaritems>
       </nav>
       <main id="panel">
         <header>
@@ -20,22 +21,24 @@
 <script>
   import Header from './components/Header.vue';
   import MapView from './components/MapView.vue';
+  import SidebarItems from './components/SidebarItems.vue';
   import Slideout from 'vue-slideout'
 
   export default {
     components: {
       'nt-header': Header,
       'nt-mapview': MapView,
+      'nt-sidebaritems': SidebarItems,
       Slideout
     }
   }
 </script>
 
 <style>
-body {
-    width: 100%;
+  html, body {
     height: 100%;
-    margin: 0;
+    margin: 0px;
+    padding: 0px;
   }
 
   .slideout-menu {
